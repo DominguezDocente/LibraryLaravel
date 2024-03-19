@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,6 @@ Route::get('/authors/edit/{id}', [AuthorsController::class, 'edit'])->name('auth
 Route::post('/authors/store', [AuthorsController::class, 'store'])->name('authors.store');
 Route::put('/authors/update', [AuthorsController::class, 'update'])->name('authors.update');
 Route::delete('/authors/delete/{id}', [AuthorsController::class, 'delete'])->name('authors.delete');
+
+
+Route::get('/books', [BooksController::class, 'index'])->name('books.index');
